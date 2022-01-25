@@ -58,7 +58,6 @@ function translateSelection() {
   var targetLanguage = userDefinedLanguage ? userDefinedLanguage : 'en';
   var translation = LanguageApp.translate(text, 'es', targetLanguage);
 
-  //use a while loop for the translation, YESSS!!! VICTORYYY
   //size 10 font,should fit 70 characters per line
 
   /*Explanation of the loops below
@@ -72,7 +71,7 @@ function translateSelection() {
     - Restart for the next line  */
   var i = 0;
   while(i < sentence_array.length) {
-    //@@@ Change the line below with the language code of the original language you want a translation of
+    //@@@ Change the line below with the language code of the original language you want to translate
     var translation = LanguageApp.translate(sentence_array[i], 'es', targetLanguage);
     var sentence = sentence_array[i]
     if (sentence.length > 70 ){
